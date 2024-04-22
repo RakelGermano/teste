@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de LEDs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Controle de LEDs</h1>
+    <button id="ligar1">Ligar LED 1</button>
+    <button id="desligar1">Desligar LED 1</button>
+    <button id="ligar2">Ligar LED 2</button>
+    <button id="desligar2">Desligar LED 2</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#ligar1").click(function(){
+                $.post("/ligar1");
+            });
+            $("#desligar1").click(function(){
+                $.post("/desligar1");
+            });
+            $("#ligar2").click(function(){
+                $.post("/ligar2");
+            });
+            $("#desligar2").click(function(){
+                $.post("/desligar2");
+            });
+        });
+    </script>
+</body>
+</html>
